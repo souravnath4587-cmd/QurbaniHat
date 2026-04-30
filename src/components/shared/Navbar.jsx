@@ -45,7 +45,7 @@ const Navbar = () => {
           </button>
         </div>
       ) : (
-        <button className="btn btn-primary">
+        <button className="btn bg-green-500 hover:bg-green-600 text-white ">
           {" "}
           <Link href={"/login"}>Login </Link>{" "}
         </button>
