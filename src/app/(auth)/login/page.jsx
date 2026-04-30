@@ -1,15 +1,22 @@
 "use client";
 import { authClient } from "@/lib/auth-client";
+import { json } from "better-auth";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
+import { FaEye, FaEyeSlash, FaGit, FaGithub, FaGoogle } from "react-icons/fa";
 
 const LoginPage = () => {
+  const [isShowPassword, setIsShowPassword] = useState(false);
+
   const {
     register,
     handleSubmit,
     watch,
     formState: { errors },
   } = useForm();
+
+  console.log(errors);
 
   const handleLogin = async (data) => {
     console.log(data);
@@ -20,6 +27,7 @@ const LoginPage = () => {
       rememberMe: true,
       callbackURL: "/",
     });
+
     if (error) {
       alert(error.message);
     } else {
@@ -52,29 +60,42 @@ const LoginPage = () => {
             </fieldset>
 
             {/* Password */}
-            <fieldset className="fieldset">
+            <fieldset className="fieldset relative">
               <legend className="fieldset-legend">Password</legend>
               <input
-                type="password"
+                type={isShowPassword ? "text" : "password"}
                 placeholder="Enter your password"
                 {...register("password", {
                   required: "Password Field is required",
                 })}
                 className="w-full border px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
               />
+              <span
+                className="absolute right-2 top-4 cursor-pointer"
+                onClick={() => setIsShowPassword(!isShowPassword)}
+              >
+                {isShowPassword ? <FaEye /> : <FaEyeSlash />}
+              </span>
+              {errors.password && (
+                <p className="text-red-500">{errors.password.message}</p>
+              )}
             </fieldset>
 
-            {/* Options */}
+            {/* Options
             <div className="flex justify-between items-center text-sm">
               <label className="flex items-center gap-2">
-                <input type="checkbox" />
+                <input
+                  type="checkbox"
+                  checked={remember}
+                  onChange={(e) => setRemember(e.target.checked)}
+                />
                 Remember me
               </label>
 
               <Link href="#" className="text-green-600 hover:underline">
                 Forgot password?
               </Link>
-            </div>
+            </div> */}
 
             {/* Button */}
             <button
@@ -86,12 +107,21 @@ const LoginPage = () => {
           </form>
 
           {/* Register */}
-          <p className="text-sm mt-6 text-center">
+          <p className="text-sm mt-6 text-center mb-4">
             Don’t have an account?{" "}
             <Link href="/register" className="text-green-600 font-medium">
               Sign up
             </Link>
           </p>
+
+          <div className="flex flex-row justify-center items-center gap-4">
+            <button className="btn btn-primary">
+              <FaGithub /> Github
+            </button>
+            <button className="btn btn-primary">
+              <FaGoogle /> Google
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -99,100 +129,3 @@ const LoginPage = () => {
 };
 
 export default LoginPage;
-
-// "use client";
-// import { authClient } from "@/lib/auth-client";
-// import Link from "next/link";
-// import React, { useState } from "react";
-// import { useForm } from "react-hook-form";
-// import { FaEye, FaEyeSlash } from "react-icons/fa";
-
-// const LoginPage = () => {
-//   const {
-//     register,
-//     handleSubmit,
-//     watch,
-//     formState: { errors },
-//   } = useForm();
-
-//   const [isShowPassword, setIsShowPassword] = useState(false);
-
-//   const handleLoginFunc = async (data) => {
-//     console.log(data, "data");
-
-//     const { data: res, error } = await authClient.signIn.email({
-//       email: data.email, // required
-//       password: data.password, // required
-//       rememberMe: true,
-//       callbackURL: "/",
-//     });
-
-//     console.log(res, error);
-
-//     if (error) {
-//       alert(error.message);
-//     }
-
-//     if (res) {
-//       alert("Signin successful");
-//     }
-//   };
-
-//   return (
-//     <div className="container mx-auto min-h-[80vh] flex justify-center items-center bg-slate-100">
-//       <div className="p-4 rounded-xl bg-white">
-//         <h2 className="font-bold text-3xl text-center mb-6">
-//           Login your account
-//         </h2>
-
-//         <form className="space-y-4" onSubmit={handleSubmit(handleLoginFunc)}>
-//           <fieldset className="fieldset">
-//             <legend className="fieldset-legend">Email</legend>
-//             <input
-//               type="email"
-//               className="input"
-//               placeholder="Type here email"
-//               {...register("email", {
-//                 required: "Email field is required",
-//               })}
-//             />
-//             {errors.email && (
-//               <p className="text-red-500">{errors.email.message}</p>
-//             )}
-//           </fieldset>
-//           <fieldset className="fieldset relative">
-//             <legend className="fieldset-legend">Password</legend>
-//             <input
-//               type={isShowPassword ? "text" : "password"}
-//               className="input"
-//               placeholder="Type here password"
-//               {...register("password", {
-//                 required: "Password field is required",
-//               })}
-//             />
-//             <span
-//               className="absolute right-2 top-4 cursor-pointer"
-//               onClick={() => setIsShowPassword(!isShowPassword)}
-//             >
-//               {isShowPassword ? <FaEye /> : <FaEyeSlash />}
-//             </span>
-//             {errors.password && (
-//               <p className="text-red-500">{errors.password.message}</p>
-//             )}
-//           </fieldset>
-
-//           <button className="btn w-full bg-slate-800 text-white">Login</button>
-//         </form>
-
-//         <p className="mt-4">
-//           Don't have an account?{" "}
-//           <Link href={"/register"} className="text-blue-500">
-//             Register
-//           </Link>
-//         </p>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default LoginPage;

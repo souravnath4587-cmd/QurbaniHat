@@ -8,7 +8,7 @@ const Hero = () => {
       <section className="relative w-full h-[90vh] flex items-center justify-center text-white">
         {/* Background Image */}
         <Image
-          src="https://images.unsplash.com/photo-1598514982901-1d60f4cbb3c2"
+          src="https://images.unsplash.com/photo-1527153857715-3908f2bae5e8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y293fGVufDB8fDB8fHww"
           alt="Cow"
           fill
           priority
