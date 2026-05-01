@@ -3,6 +3,7 @@ import Image from "next/image";
 import SortType from "./SortType";
 import { useState } from "react";
 import SortPrice from "./SortPrice";
+import Link from "next/link";
 
 const AnimalClient = ({ animals }) => {
   const [filter, setFilter] = useState("All");
@@ -60,7 +61,9 @@ const AnimalClient = ({ animals }) => {
               <p className="font-bold mt-2">৳ {animal.price}</p>
 
               <button className="mt-3 w-full bg-green-600 text-white py-2 rounded-lg hover:bg-blue-700">
-                Details
+                <Link className="block" href={`/animals/${animal.id}`}>
+                  Details
+                </Link>
               </button>
             </div>
           </div>
