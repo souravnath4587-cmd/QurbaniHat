@@ -1,6 +1,6 @@
 import React from "react";
 
-const loading = () => {
+const LoadingPage = () => {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-green-50">
       {/* Cow Emoji / Logo */}
@@ -20,4 +20,4 @@ const loading = () => {
   );
 };
 
-export default loading;
+export default LoadingPage;

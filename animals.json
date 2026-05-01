@@ -10,7 +10,7 @@
       "age": 3,
       "location": "Bogura",
       "description": "Healthy deshi cow suitable for Qurbani. Well fed with natural খাবার.",
-      "image": "https://i.postimg.cc/4xqz1kRz/cow1.jpg",
+      "image": "https://i.postimg.cc/PrHKBqYv/IMG-20221120-WA0004.jpg.jpg",
       "category": "Large Animal",
       "stock": true,
       "rating": 4.5
@@ -25,7 +25,7 @@
       "age": 4,
       "location": "Dhaka",
       "description": "Imported Friesian cow with excellent health and weight.",
-      "image": "https://i.postimg.cc/Z5p0Jk7G/cow2.jpg",
+      "image": "https://i.postimg.cc/s2C2Jbb8/IMG-20221120-WA0010.jpg",
       "category": "Large Animal",
       "stock": true,
       "rating": 4.8
@@ -40,7 +40,7 @@
       "age": 2,
       "location": "Rajshahi",
       "description": "Popular Black Bengal goat, very healthy and مناسبة for Qurbani.",
-      "image": "https://i.postimg.cc/3wzjYk2Y/goat1.jpg",
+      "image": "https://i.postimg.cc/qMgXfCgr/black-bengal-goat.jpg",
       "category": "Small Animal",
       "stock": true,
       "rating": 4.6
@@ -70,7 +70,7 @@
       "age": 5,
       "location": "Khulna",
       "description": "Premium Sahiwal cow with high meat quality.",
-      "image": "https://i.postimg.cc/mr6G0v9g/cow3.jpg",
+      "image": "https://i.postimg.cc/05VbqWJV/IMG-20221120-WA0008.jpg",
       "category": "Large Animal",
       "stock": false,
       "rating": 4.9
@@ -100,7 +100,7 @@
       "age": 4,
       "location": "Sylhet",
       "description": "Strong and সুন্দর Red Sindhi cow, suitable for big Qurbani.",
-      "image": "https://i.postimg.cc/8kZLhQ9R/cow4.jpg",
+      "image": "https://i.postimg.cc/rp5DXqSW/IMG-20221120-WA0007.jpg",
       "category": "Large Animal",
       "stock": true,
       "rating": 4.6
