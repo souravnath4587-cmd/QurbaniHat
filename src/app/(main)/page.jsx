@@ -5,10 +5,11 @@ import Hero from "@/components/homepage/Hero";
 const Home = async () => {
   return (
     <>
-      <p>This is home page..</p>
       <Hero />
-      <Feature />
-      <Extra />
+      <main className="container mx-auto">
+        <Feature />
+        <Extra />
+      </main>
     </>
   );
 };

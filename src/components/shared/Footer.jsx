@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import React from "react";
 
@@ -20,7 +21,7 @@ const Footer = () => {
           <h3 className="text-xl font-semibold text-green-400">Contact Us</h3>
           <ul className="mt-3 space-y-2 text-gray-300">
             <li>📍 Feni, Chattogram, Bangladesh</li>
-            <li>📞 +880 1234-567890</li>
+            <li>📞 +880 1799 052958</li>
             <li>📧 support@qurbanihat.com</li>
           </ul>
         </div>
