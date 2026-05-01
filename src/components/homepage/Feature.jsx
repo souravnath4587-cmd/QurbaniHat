@@ -69,7 +69,7 @@ const Feature = () => {
 
                 {/* Button */}
                 <button className="mt-4 w-full bg-green-700 text-white py-2 rounded-lg hover:bg-green-800 transition">
-                  View Details
+                  <Link href={"/animals/01"}>View Details</Link>
                 </button>
               </div>
             </div>

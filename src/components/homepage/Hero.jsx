@@ -33,7 +33,7 @@ const Hero = () => {
 
             <div className="mt-6 flex gap-4 justify-center md:justify-start">
               <button className="bg-green-700 text-white px-6 py-3 rounded-lg hover:bg-green-800 transition">
-                <Link href={"/allAnimals"}>পশু দেখুন</Link>
+                <Link href={"/animals"}>পশু দেখুন</Link>
               </button>
 
               <button className="border border-green-700 text-green-700 px-6 py-3 rounded-lg hover:bg-green-100 transition">
