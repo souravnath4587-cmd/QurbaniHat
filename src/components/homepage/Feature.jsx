@@ -9,7 +9,7 @@ const Feature = () => {
       <div className="max-w-7xl mx-auto px-6">
         {/* Section Title */}
         <h2 className="text-3xl md:text-4xl font-bold text-center text-green-800">
-          🌟 Featured Animals
+          Featured Animals
         </h2>
         <p className="text-center text-gray-600 mt-2">
           Best quality, popular and trusted Qurbani animals

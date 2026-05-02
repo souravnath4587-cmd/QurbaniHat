@@ -19,32 +19,32 @@ const Hero = () => {
         <div className="md:col-span-6 col-span-full ">
           <div className="text-center md:text-left">
             <h1 className="text-4xl md:text-5xl font-bold text-green-800 leading-tight">
-              কুরবানির পশু কিনুন এখন ঘরে বসেই 🐄
+              Buy Qurbani animals from the comfort of your home 🐄
             </h1>
 
             <p className="mt-4 text-gray-700 text-lg">
-              ঈদুল আযহার জন্য স্বাস্থ্যবান ও যাচাইকৃত গরু, ছাগল ও ভেড়া খুঁজে নিন
-              সহজেই।
+              Find healthy and verified cows, goats, and sheep for Eid-ul-Adha
+              easily.
               <br />
               <span className="font-semibold text-green-700">
-                QurbaniHat – আপনার বিশ্বস্ত অনলাইন পশুর হাট।
+                QurbaniHat – Your trusted online livestock marketplace.
               </span>
             </p>
 
             <div className="mt-6 flex gap-4 justify-center md:justify-start">
               <button className="bg-green-700 text-white px-6 py-3 rounded-lg hover:bg-green-800 transition">
-                <Link href={"/animals"}>পশু দেখুন</Link>
+                <Link href={"/animals"}>Browse Animals</Link>
               </button>
 
               <button className="border border-green-700 text-green-700 px-6 py-3 rounded-lg hover:bg-green-100 transition">
-                আরও জানুন
+                Learn More
               </button>
             </div>
 
             {/* highlight */}
             <p className="mt-6 text-sm text-gray-600">
-              ✔ স্বাস্থ্য যাচাইকৃত পশু &nbsp; ✔ সারা বাংলাদেশ ডেলিভারি &nbsp; ✔
-              নিরাপদ লেনদেন
+              ✔ Health-verified animals &nbsp; ✔ Nationwide delivery across
+              Bangladesh &nbsp; ✔ Secure transactions
             </p>
           </div>
         </div>

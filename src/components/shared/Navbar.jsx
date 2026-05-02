@@ -10,8 +10,12 @@ const Navbar = () => {
   const user = session?.user;
 
   return (
-    <div className="container mx-auto flex justify-between gap-4 mt-6">
-      <div></div>
+    <div className="container mx-auto flex justify-between gap-4 p-4">
+      <div className="logo">
+        <h3 className="text-2xl font-bold text-[#013416]">
+          Qurbani<span className="text-[#3b821d]">Hat</span>
+        </h3>
+      </div>
       <ul className="flex justify-between items-center text-gray-700 gap-4">
         <li>
           <NavLink href={"/"}>Home</NavLink>

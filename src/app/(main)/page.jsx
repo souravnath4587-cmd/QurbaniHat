@@ -1,6 +1,6 @@
-import Extra from "@/components/homepage/Extra";
 import Feature from "@/components/homepage/Feature";
 import Hero from "@/components/homepage/Hero";
+import QurbaniGuid from "@/components/homepage/QurbaniGuid";
 
 const Home = async () => {
   return (
@@ -8,7 +8,7 @@ const Home = async () => {
       <Hero />
       <main className="container mx-auto">
         <Feature />
-        <Extra />
+        <QurbaniGuid />
       </main>
     </>
   );

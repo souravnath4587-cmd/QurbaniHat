@@ -17,6 +17,7 @@ const AnimalDetailPage = async ({ params }) => {
     breed,
     category,
     rating,
+    location,
     description,
     weight,
     id: Id,
@@ -68,7 +69,11 @@ const AnimalDetailPage = async ({ params }) => {
             </p>
             <p>
               <span className="font-bold">Breed : </span>
-              {breed} Years
+              {breed}
+            </p>
+            <p>
+              <span className="font-bold">Location : </span>
+              {location}
             </p>
           </div>
           <div>
@@ -78,7 +83,7 @@ const AnimalDetailPage = async ({ params }) => {
             </p>
             <p>
               <span className="font-bold">Category : </span>
-              {category} Years
+              {category}
             </p>
           </div>
         </div>

@@ -1,12 +1,17 @@
 "use client";
 
+import Image from "next/image";
+import Logo from "@/assets/qurbaniHatLogo.png";
 import Link from "next/link";
 
 export default function AboutPage() {
   return (
-    <div className="max-w-6xl mx-auto p-6 space-y-10">
+    <div className="max-w-6xl mx-auto p-6 space-y-6">
       {/* Hero Section */}
       <div className="text-center">
+        <div className="flex justify-center">
+          <Image src={Logo} alt="Website Logo" width={300} height={200}></Image>
+        </div>
         <h1 className="text-4xl font-bold mb-3">About QurbaniHat</h1>
         <p className="text-gray-600 max-w-2xl mx-auto">
           QurbaniHat is a trusted online platform where you can buy healthy and
