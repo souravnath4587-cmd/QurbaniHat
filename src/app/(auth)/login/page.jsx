@@ -1,10 +1,9 @@
 "use client";
 import { authClient } from "@/lib/auth-client";
-import { json } from "better-auth";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { FaEye, FaEyeSlash, FaGit, FaGithub, FaGoogle } from "react-icons/fa";
+import { FaEye, FaEyeSlash, FaGithub, FaGoogle } from "react-icons/fa";
 
 const LoginPage = () => {
   const [isShowPassword, setIsShowPassword] = useState(false);
@@ -15,8 +14,6 @@ const LoginPage = () => {
     watch,
     formState: { errors },
   } = useForm();
-
-  console.log(errors);
 
   const handleLogin = async (data) => {
     console.log(data);
@@ -33,6 +30,18 @@ const LoginPage = () => {
     } else {
       alert("Successfully done");
     }
+  };
+
+  const handleGoogleSignIn = async () => {
+    const data = await authClient.signIn.social({
+      provider: "google",
+    });
+    console.log(data);
+  };
+
+  const handleGithubSignIn = async () => {
+    const data = await authClient.signIn.social({ provider: "github" });
+    console.log(data);
   };
 
   return (
@@ -115,10 +124,16 @@ const LoginPage = () => {
           </p>
 
           <div className="flex flex-row justify-center items-center gap-4">
-            <button className="btn btn-primary">
+            <button
+              className="btn bg-blue-600 text-white hover:bg-green-600"
+              onClick={handleGithubSignIn}
+            >
               <FaGithub /> Github
             </button>
-            <button className="btn btn-primary">
+            <button
+              className="btn bg-blue-600 hover:bg-green-600 text-white"
+              onClick={handleGoogleSignIn}
+            >
               <FaGoogle /> Google
             </button>
           </div>
