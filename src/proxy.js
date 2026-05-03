@@ -4,12 +4,14 @@ dns.setServers(["8.8.8.8", "8.8.4.4"]);
 import { NextResponse } from "next/server";
 import { auth } from "./lib/auth";
 import { headers } from "next/headers";
+import { toast } from "react-toastify";
 
 export async function proxy(request) {
   const session = await auth.api.getSession({
     headers: await headers(),
   });
   if (session) {
+    toast("wellcom ");
     return NextResponse.next();
   }
 

@@ -4,6 +4,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { toast } from "react-toastify";
 
 const RegisterPage = () => {
   const [isShowPassword, setIsShowPassword] = useState(false);
@@ -26,9 +27,9 @@ const RegisterPage = () => {
       callbackURL: "/",
     });
     if (error) {
-      alert(error.message);
+      toast.error(error.message);
     } else {
-      alert("Successfully Register");
+      toast.success("Successfully Register");
     }
   };
 

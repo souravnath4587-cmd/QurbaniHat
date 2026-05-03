@@ -26,7 +26,7 @@ const AnimalDetailPage = async ({ params }) => {
   console.log(animalDetails);
 
   return (
-    <div className="flex flex-row justify-around items-center gap-4 p-8">
+    <div className="flex md:flex-row flex-col justify-around items-center gap-4 p-8">
       <div key={Id} className="md:w-1/2 ">
         <Image src={image} alt={name} width={600} height={380}></Image>
         {/* <h4 className=" text-xl uppercase font-bold my-4 pr-8">
@@ -97,7 +97,7 @@ const AnimalDetailPage = async ({ params }) => {
           Helth Care <hr />
         </h4>
         <div>
-          <ul className="list-disc flex flex-row gap-6 p-4">
+          <ul className="list-disc flex flex-row flex-wrap gap-6 p-4">
             <li>FMD Vaccinated</li>
             <li>Dewormed</li>
             <li>Anthrax Vaccinated</li>

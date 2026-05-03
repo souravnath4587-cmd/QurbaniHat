@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaEye, FaEyeSlash, FaGithub, FaGoogle } from "react-icons/fa";
+import { toast } from "react-toastify";
 
 const LoginPage = () => {
   const [isShowPassword, setIsShowPassword] = useState(false);
@@ -26,9 +27,9 @@ const LoginPage = () => {
     });
 
     if (error) {
-      alert(error.message);
+      toast.error(error.message);
     } else {
-      alert("Successfully done");
+      toast.success("Successfully done");
     }
   };
 
@@ -40,7 +41,9 @@ const LoginPage = () => {
   };
 
   const handleGithubSignIn = async () => {
-    const data = await authClient.signIn.social({ provider: "github" });
+    const data = await authClient.signIn.social({
+      provider: "github",
+    });
     console.log(data);
   };
 
