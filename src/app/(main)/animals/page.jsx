@@ -1,15 +1,15 @@
 import React from "react";
-import Image from "next/image";
-import SortType from "@/ui/SortType";
-import { getAnimals } from "@/lib/animalData";
+
+import animalsData from "@/assets/animals.json";
 import AnimalClient from "@/ui/AnimalClient";
 
 const AnimalPage = async () => {
-  const animals = await getAnimals();
+  const { animals } = animalsData;
 
   return (
     <>
-      <AnimalClient animals={animals} />
+      {" "}
+      <AnimalClient animals={animals} />{" "}
     </>
   );
 };
