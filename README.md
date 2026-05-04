@@ -1,36 +1,128 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🐄 QurbaniHat
 
-## Getting Started
+QurbaniHat is a modern online livestock marketplace built for Eid-ul-Adha, where users can بسهولة browse, select, and book healthy and verified animals from the comfort of their home.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Features
+
+- 🐄 Browse cows, goats, and sheep
+- 🔍 Filter & sort animals (price, type, name)
+- 📄 Detailed animal pages
+- 🛒 Booking system with modal form
+- 🔐 Authentication system (login required for booking)
+- 📱 Fully responsive design
+- 🎨 Modern UI with Tailwind CSS
+
+---
+
+## 🧑‍💻 Tech Stack
+
+- **Frontend:** Next.js (App Router)
+- **Styling:** Tailwind CSS
+- **State Management:** React Hooks
+- **Authentication:** NextAuth / Firebase (optional)
+- **Notifications:** React Hot Toast
+
+---
+
+## 📂 Project Structure
+
+```
+app/
+ ├── (main)/
+ │   ├── page.jsx
+ │   ├── layout.jsx
+ │
+ ├── animals/
+ │   ├── page.jsx
+ │   ├── [id]/page.jsx
+ │
+ ├── about/page.jsx
+ ├── contact/page.jsx
+
+components/
+ ├── Navbar.jsx
+ ├── Footer.jsx
+ ├── AnimalCard.jsx
+ ├── BookingModal.jsx
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## ⚙️ Installation
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+# Clone the repository
+git clone https://github.com/your-username/qurbanihat.git
 
-## Learn More
+# Go to project folder
+cd qurbanihat
 
-To learn more about Next.js, take a look at the following resources:
+# Install dependencies
+npm install
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Run development server
+npm run dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🔐 Environment Variables
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Create a `.env.local` file:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```env
+NEXTAUTH_URL=http://localhost:3000
+NEXTAUTH_SECRET=your_secret_key
+```
+
+---
+
+## 📸 Pages Overview
+
+- **Home Page** → Hero, Featured Animals, Qurbani Guide
+- **Animals Page** → Filter + Grid Gallery
+- **Animal Details Page** → Full details + Order Now
+- **About Page** → Farm info, team, trust
+- **Contact Page** → Contact form + info
+
+---
+
+## 🛒 Booking Flow
+
+1. User clicks **Order Now**
+2. Login required check
+3. Booking modal opens
+4. User fills form (name, email, phone, address)
+5. Submit → success toast
+
+---
+
+## 💡 Future Improvements
+
+- 💳 Online payment (bKash / Nagad)
+- ⭐ Reviews & ratings system
+- ❤️ Wishlist feature
+- 📦 Order tracking
+- 📊 Admin dashboard
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to fork the repo and submit a pull request.
+
+---
+
+## 📞 Contact
+
+📍 Feni, Chattogram, Bangladesh
+📧 [support@qurbanihat.com](mailto:support@qurbanihat.com)
+📞 +880 1234-567890
+
+---
+
+## ⭐ Support
+
+If you like this project, give it a ⭐ on GitHub!

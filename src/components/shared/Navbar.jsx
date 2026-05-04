@@ -2,7 +2,7 @@
 import { authClient } from "@/lib/auth-client";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React from "react";
 import NavLink from "./NavLink";
 import { IoPersonCircle } from "react-icons/io5";
 
@@ -23,6 +23,9 @@ const Navbar = () => {
       </li>
       <li>
         <NavLink href={"/contact"}>Contact Us</NavLink>
+      </li>
+      <li>
+        <NavLink href={"/profile"}>Profile</NavLink>
       </li>
     </>
   );
@@ -93,14 +96,18 @@ const Navbar = () => {
           ) : (
             <div className="flex flex-row items-center gap-2">
               <IoPersonCircle size={40} />
-              <button className="btn bg-green-500 hover:bg-blue-600 text-white ">
-                {" "}
-                <Link href={"/login"}>Login </Link>{" "}
-              </button>
-              <button className="btn bg-green-500 hover:bg-blue-600 text-white ">
-                {" "}
-                <Link href={"/register"}>Register </Link>{" "}
-              </button>
+              <Link className="" href={"/login"}>
+                <button className="btn bg-green-500 hover:bg-blue-600 text-white ">
+                  {" "}
+                  Login{" "}
+                </button>
+              </Link>{" "}
+              <Link className="block" href={"/register"}>
+                <button className="btn bg-green-500 hover:bg-blue-600 text-white ">
+                  {" "}
+                  Register{" "}
+                </button>
+              </Link>{" "}
             </div>
           )}
         </div>

@@ -1,10 +1,8 @@
 import { getAnimalsDetails } from "@/lib/animalData";
 import React from "react";
-import cow from "@/assets/quarbniCow.webp";
 import Image from "next/image";
-import { describe } from "better-auth";
-import { FaStar } from "react-icons/fa";
 import StarRating from "@/ui/StarRating";
+import Order from "@/ui/Order";
 
 const AnimalDetailPage = async ({ params }) => {
   const { id } = await params;
@@ -22,8 +20,6 @@ const AnimalDetailPage = async ({ params }) => {
     weight,
     id: Id,
   } = animalDetails;
-
-  console.log(animalDetails);
 
   return (
     <div className="flex md:flex-row flex-col justify-around items-center gap-4 p-8">
@@ -118,9 +114,7 @@ const AnimalDetailPage = async ({ params }) => {
             Bran, Grass Pea, Mustard Oil Cake
           </p>
         </div>
-        <button className="btn bg-green-600 text-white px-8 w-full mt-8">
-          Order Now
-        </button>
+        <Order />
       </div>
     </div>
   );
