@@ -1,12 +1,16 @@
-import { getAnimalsDetails } from "@/lib/animalData";
+// import { getAnimalsDetails } from "@/lib/animalData";
 import React from "react";
 import Image from "next/image";
 import StarRating from "@/ui/StarRating";
 import Order from "@/ui/Order";
+import animalsData from "@/assets/animals.json";
 
 const AnimalDetailPage = async ({ params }) => {
   const { id } = await params;
-  const animalDetails = await getAnimalsDetails(id);
+  // const animalDetails = await getAnimalsDetails(id);
+  const { animals } = animalsData;
+  const filterAnimals = animals.filter((animal) => animal.id == id);
+
   const {
     image,
     name,
@@ -19,7 +23,7 @@ const AnimalDetailPage = async ({ params }) => {
     description,
     weight,
     id: Id,
-  } = animalDetails;
+  } = filterAnimals[0];
 
   return (
     <div className="flex md:flex-row flex-col justify-around items-center gap-4 p-8">
