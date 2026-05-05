@@ -114,7 +114,7 @@ const AnimalDetailPage = async ({ params }) => {
             Bran, Grass Pea, Mustard Oil Cake
           </p>
         </div>
-        <Order />
+        <Order name={name} />
       </div>
     </div>
   );
