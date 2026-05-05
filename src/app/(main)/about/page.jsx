@@ -3,14 +3,30 @@
 import Image from "next/image";
 import Logo from "@/assets/qurbaniHatLogo.png";
 import Link from "next/link";
+import { useSpring, animated } from "@react-spring/web";
 
 export default function AboutPage() {
+  const AnimatedImage = animated(Image);
+  const styles = useSpring({
+    from: { transform: "translateY(0px)" },
+    to: { transform: "translateY(-20px)" },
+    loop: { reverse: true }, // 🔥 up-down repeat
+    config: {
+      duration: 1500,
+    },
+  });
   return (
     <div className="max-w-6xl mx-auto p-6 space-y-6">
       {/* Hero Section */}
       <div className="text-center">
         <div className="flex justify-center">
-          <Image src={Logo} alt="Website Logo" width={300} height={200}></Image>
+          <AnimatedImage
+            src={Logo}
+            style={styles}
+            alt="Website Logo"
+            width={300}
+            height={200}
+          />
         </div>
         <h1 className="text-4xl font-bold mb-3">About QurbaniHat</h1>
         <p className="text-gray-600 max-w-2xl mx-auto">

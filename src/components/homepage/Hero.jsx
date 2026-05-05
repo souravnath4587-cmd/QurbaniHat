@@ -3,13 +3,8 @@ import Image from "next/image";
 import qurbaniCow from "@/assets/quarbniCow.webp";
 import React from "react";
 import Link from "next/link";
-// import { useSpring, animated } from "@react-spring/web";
 
 const Hero = () => {
-  // const springs = useSpring({
-  //   from: { x: 0 },
-  //   to: { x: 100 },
-  // });
   return (
     <div className="bg-[#e1e1e1] py-16 px-6">
       <div className="grid grid-cols-12 justify-between items-center gap-4">
@@ -32,7 +27,7 @@ const Hero = () => {
               easily.
               <br />
               <span className="font-semibold text-green-700">
-                QurbaniHat – Your trusted online livestock marketplace.
+                QurbaniHat - Your trusted online livestock marketplace.
               </span>
             </p>
 
@@ -44,15 +39,6 @@ const Hero = () => {
               <button className="border border-green-700 text-green-700 px-6 py-3 rounded-lg hover:bg-green-100 transition">
                 Learn More
               </button>
-              {/* <animated.div
-                style={{
-                  width: 80,
-                  height: 80,
-                  background: "#ff6d6d",
-                  borderRadius: 8,
-                  ...springs,
-                }}
-              /> */}
             </div>
 
             {/* highlight */}

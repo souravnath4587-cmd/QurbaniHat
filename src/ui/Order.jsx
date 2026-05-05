@@ -6,18 +6,14 @@ import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 
 const Order = ({ name }) => {
-  console.log(name);
-
   const { data: session } = authClient.useSession();
   const user = session?.user;
   const [isOpen, setIsOpen] = useState(false);
   const { register, handleSubmit, reset } = useForm();
 
   const handleFormSubmit = (data) => {
-    console.log(data);
-
     if (data) {
-      toast.success(`${name} order is comfirmed`);
+      toast.success(`${name} order is confirmed`);
       redirect("/");
     }
     setIsOpen(false);

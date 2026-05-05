@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Logo from "@/assets/qurbaniHatLogo.png";
 import { useState } from "react";
+import { useSpring, animated } from "@react-spring/web";
 
 export default function ContactPage() {
   const [form, setForm] = useState({
@@ -21,12 +22,27 @@ export default function ContactPage() {
     alert("Message sent successfully!");
     setForm({ name: "", email: "", message: "" });
   };
+  const AnimatedImage = animated(Image);
+  const styles = useSpring({
+    from: { transform: "translateY(0px)" },
+    to: { transform: "translateY(-20px)" },
+    loop: { reverse: true }, // 🔥 up-down repeat
+    config: {
+      duration: 1500,
+    },
+  });
 
   return (
-    <div className="max-w-6xl mx-auto p-6 space-y-6">
+    <div className="max-w-6xl mx-auto pt-6 space-y-6">
       {/* Header */}
       <div className="flex justify-center">
-        <Image src={Logo} alt="Website Logo" width={300} height={200}></Image>
+        <AnimatedImage
+          src={Logo}
+          style={styles}
+          alt="Website Logo"
+          width={300}
+          height={200}
+        />
       </div>
       <div className="text-center">
         <h1 className="text-4xl font-bold mb-3">Contact Us</h1>
